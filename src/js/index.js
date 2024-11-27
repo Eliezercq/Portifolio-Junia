@@ -1,18 +1,19 @@
-const botaoMostrarProjetos = document.querySelector('.btn-mostrar-projetos');
-const projetosInativos = document.querySelectorAll('.projeto:not(.ativo)');
+const botaoMostrarProdutos = document.querySelector('.btn-mostrar-produtos');
+const produtosInativos = document.querySelectorAll('.produto:not(.ativo)');
 
-botaoMostrarProjetos.addEventListener('click', () => {
-    mostrarMaisProjetos();
+botaoMostrarProdutos.addEventListener('click', () => {
+    mostrarMaisProdutos();
 
     esconderBotao();
 });
 
 function esconderBotao() {
-    botaoMostrarProjetos.classList.add("remover");
+    botaoMostrarProdutos.classList.add("remover");
 }
 
-function mostrarMaisProjetos() {
-    projetosInativos.forEach(projetoInativo => {
-        projetoInativo.classList.add('ativo');
+function mostrarMaisProdutos() {
+    produtosInativos.forEach(produtoInativo => {
+        produtoInativo.classList.add('ativo');
     });
 }
+

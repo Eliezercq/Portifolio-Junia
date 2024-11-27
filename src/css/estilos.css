@@ -1,56 +1,36 @@
-/* para comentar o código CSS, é so clicar Ctrl + ; e para descomentar é só repetir o processo */
 html {
     color: #fff;
-    /*cor do site(textos)*/
     scroll-behavior: smooth;
-    /*rolar lentamente*/
 }
 
 body {
     font-family: "Poppins", sans-serif;
     margin: 0 auto;
-    /*centralizando o conteúdo e aplicando a margem automática*/
     max-width: 1120px;
-    /*largura máxima*/
     background: linear-gradient(30deg, #000000, #620262);
     background-size: 120% 120%;
 }
 
 .cabecalho {
     display: flex;
-    /*display flex coloca os itens filhos um do lado do outro, por padrão fica em linha*/
     justify-content: space-between;
-    /*justificando os espaços de divisão*/
     align-items: center;
-    /*centralizando verticalmente*/
-    /*espaçamento interno dos itens*/
     padding: 30px 15px;
-    /*espaçamento interno dos itens*/
 }
 
 .cabecalho .logo {
-    /*estilizando o elemento com classe logo que esta dentro de outro elemento com classe cabecalho*/
     width: 65px;
-    /*largura*/
     height: 65px;
-    /*altura*/
     border-radius: 50%;
-    /*tornando redondo*/
     border: 2px solid #fff;
-    /*colocando borda*/
     text-decoration: underline;
-    /*linha embaixo*/
     text-align: center;
-    /*posicionando o texto*/
     line-height: 55px;
-    /*altura da linha*/
     font-family: "Raleway", sans-serif;
     transition: 0.2s;
-    /*suavizando a transição*/
 }
 
 .cabecalho a:hover .logo {
-    /*efeito passando o mouse*/
     color: #9443d8;
     border: 2px solid #9443d8;
 
@@ -58,48 +38,33 @@ body {
 
 .cabecalho .menu li a {
     font: size 20px;
-    /*tamanho da fonte*/
     text-transform: capitalize;
-    /*as primeiras letras das palavras ficam maiúsculas*/
     padding: 10px 20px;
-    /*espaçamento interno*/
     transition: 0.2s;
 }
 
 .cabecalho .menu li a:hover {
-    /*efeito passando mouse*/
     background-color: #9443d8;
     color: #fff;
     border-radius: 50px;
-    /*tornando redondo*/
 }
 
 .home {
-    /*display flex coloca os itens filhos um do lado do outro*/
     display: flex;
-    /*pegando elementos filhos e colocando lado a lado*/
     min-height: calc(100vh - 125px);
-    /*altura da janela*/
     align-items: center;
-    /*alinhando itens na janela*/
     gap: 50px;
-    /*definindo espaços fixos entre texto e imagens*/
     justify-content: space-between;
 
 }
 
 .home .informacoes {
     display: flex;
-    /*alinhando itens*/
     flex-direction: column;
-    /*alinhando itens em coluna*/
     gap: 15px;
-    /*separando elementos*/
     letter-spacing: 2px;
-    /*epaço entre letras*/
     padding: 0 15px;
     max-width: 50%;
-    /*espaço ocupado*/
 }
 
 .home .informacoes h1 {
@@ -109,7 +74,6 @@ body {
 }
 
 .home .informacoes p {
-    /*estilizando o texto*/
     font-family: Raleway, sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
@@ -121,7 +85,6 @@ body {
 }
 
 .home .redes-sociais a i {
-    /*estilizando os icones*/
     border: 1px solid #fff;
     border-radius: 50%;
     width: 50px;
@@ -133,8 +96,8 @@ body {
 }
 
 .home .redes-sociais a i:hover {
-    color: #9443d8;
-    border: 1px solid #9443d8;
+    color: #c80c63;
+    border: 1px solid #be92e3;
     transform: scale(1.1);
     /*foco nas redes socias*/
 }
@@ -151,7 +114,7 @@ body {
 }
 
 .home .foto.sombra-interna {
-    background: linear-gradient(to right,#680968, #18c02e, #0057ee);/*visitar o site "https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient" para exemplos de gradiente*/
+    background: linear-gradient(to right,#d506c3, #61c018, #ee003f);
     background-size: 180% 180%;
     animation: gradient-animation 5s ease infinite;
    
@@ -174,7 +137,6 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    /*quebrando um para baixo do outro*/
     margin-bottom: 20px;
     justify-content: center;
 }
@@ -184,7 +146,6 @@ body {
     max-height: 500px;
     position: relative;
     display: none;
-    /*esconder*/
 }
 
 .produtos .produto.ativo {
@@ -193,20 +154,15 @@ body {
 
 .produtos .produto img {
     height: 100%;
-    /*altura da imagem*/
 }
 
 .produtos .produto h3 {
     background-color: #040203;
     width: 100%;
     padding-left: 20px;
-    /*padding para esquerda*/
     padding-bottom: 10px;
-    /*padding para baixo*/
     padding-top: 10px;
-    /*padding para cima*/
     position: absolute;
-    /*position absolute no h3 que é o elemento filho vai funcionar com position relative do elemento pai que esta logo acima*/
     bottom: 0;
 }
 
@@ -227,7 +183,31 @@ body {
     background-color: #000;
 }
 
+.produtos .btn-mostrar-produtos {
+   background: none;
+   border: 1px solid #fff;
+   border-radius: 15px;
+   color: #fff;
+   width: 180px;
+   padding: 20px;
+   font-size: 18px;
+   font-weight: 600;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
 
+.produtos .btn-mostrar-produtos:hover {
+
+    background-color: #c23cc2;
+    transition: 0.4s;
+}
+
+.produtos .btn-mostrar-produtos.remover {
+    display: none;
+}
 
 @keyframes gradient-animation {
     0% {
